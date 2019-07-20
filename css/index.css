@@ -91,7 +91,7 @@ header {
 		padding-right: 10px;
 	}
 
-	header nav a{
+	header nav a.headerNavLink{
 		display: flex;
 		justify-content:center;
 		padding: 30px 20px;
@@ -100,6 +100,9 @@ header {
 		color: black;
 		font-size: .9em;
 	}
+		header .headerNavLink:hover{
+			text-decoration: underline;
+		}
 
 .top-content {
     display: flex;
@@ -134,13 +137,44 @@ header {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+	#tourquise {
+		background: #008080;
+	}
+
+	#yellow {
+		background: #ffd700;
+	}
+
+	#lightBlue{
+		background-color: #5f9ea0;
+	}
+	#salmon{
+		background-color: salmon;
+	}
+	#red{
+		background-color: red;
+	}
+	#green{
+		background-color: green;
+	}
+	#purple{
+		background-color: purple;
+	}
+	#pink{
+		background-color: pink;
+	}
+	#darkPurple{
+		background-color: #4b0082;
+	}
+	#brightBlue{
+		background-color: #1e90ff
+	}
 
 .bottom-content {
     display: flex;
