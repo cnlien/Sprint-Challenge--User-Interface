@@ -80,7 +80,8 @@ header {
 	header nav {
 		display: flex;
 		justify-content: flex-end;
-		align-items: flex-start;
+		align-items: center;
+		margin-bottom: 5px;
 	}
 
 	header .topNavLogo{
@@ -89,6 +90,7 @@ header {
 		max-height: 40px;
 		margin-right: auto;
 		padding-right: 10px;
+		margin-bottom: 10px;
 	}
 
 	header nav a.headerNavLink{
@@ -99,9 +101,11 @@ header {
 		text-decoration: none;
 		color: black;
 		font-size: .9em;
+		background-color: white;
+		transition: background-color .3s;
 	}
 		header .headerNavLink:hover{
-			text-decoration: underline;
+			background-color: lightgrey;
 		}
 
 .top-content {
@@ -143,37 +147,38 @@ header {
     align-items: center;
     justify-content: center;
 }
-	#tourquise {
-		background: #008080;
+	#teal {
+		background: teal;
 	}
 
-	#yellow {
-		background: #ffd700;
+	#gold {
+		background: gold;
 	}
 
-	#lightBlue{
-		background-color: #5f9ea0;
+	#cadetblue {
+		background-color: cadetblue;
 	}
-	#salmon{
-		background-color: salmon;
+
+	#coral {
+		background-color: coral;
 	}
-	#red{
-		background-color: red;
+	#crimson {
+		background-color: crimson;
 	}
-	#green{
-		background-color: green;
+	#forestgreen {
+		background-color: forestgreen;
 	}
-	#purple{
-		background-color: purple;
+	#darkorchid {
+		background-color: darkorchid;
 	}
-	#pink{
-		background-color: pink;
+	#hotpink {
+		background-color: hotpink;
 	}
-	#darkPurple{
-		background-color: #4b0082;
+	#indigo {
+		background-color: indigo;
 	}
-	#brightBlue{
-		background-color: #1e90ff
+	#dodgerblue {
+		background-color: dodgerblue;
 	}
 
 .bottom-content {
@@ -189,6 +194,117 @@ header {
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
+
+/*    ABOUT PAGE STYLES    */
+.aboutTop {
+	border-bottom: 1px dashed black;
+	padding-bottom: 20px;
+}
+.flexContainers {
+	display: flex;
+	width: 800px;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	flex-shrink: 1;
+	padding-bottom: 20px;
+}
+
+	@media screen and (max-width: 500px) {
+		.about-page, .contact-page{
+			max-width: 400px;
+		}
+		.aboutTop {
+			max-width:400px;
+			margin-top: 0 auto;
+			border-bottom: 1px dashed black;
+			padding: 0 10px 20px 10px;
+		}
+
+		.flexContainers {
+			display: flex;
+			max-width:400px;
+			margin: 0 auto;
+			flex-flow: column nowrap;
+			align-content: center;
+			padding-bottom: 20px;
+		}
+		nav .topNavLogo{
+			display: none;
+		}
+
+		.banner-img img{
+			max-width:400px;
+			object-fit: contain;
+
+		}
+	}
+
+	.aboutContainers {
+		display: flex;
+		flex-direction: column;
+		max-width: 380px;
+		margin: 0 10px;
+		flex-shrink: 1;
+		padding: 20px;
+		border-bottom: 1px dashed black;
+	}
+
+	.aboutContainers img{
+		width: 100%;
+		flex-shrink: 1;
+	}
+	.aboutContainers img, p {
+		margin-bottom: 20px;
+	}
+
+	.aboutContainers button {
+		border: 2px solid black;
+		background: white;
+		width: 150px;
+		padding: 10px 15px;
+		border-radius: 10px;
+		font-size: 1em;
+		font-family: 'Rubik', sans-serif;
+
+	}
+
+.aboutBottom{
+	padding: 20px;
+}
+
+/*   CONTACT FORM PAGE STYLE   */
+#contactUsForm{
+	margin: 20px 0;
+}
+#contactUsForm legend{
+	margin: 10px 0;
+}
+p.formLabel{
+	margin: 10px 0 0 20px;
+	font-size: .8em;
+}
+.contactFormMessage{
+	width: 100%;
+	margin: 10px 0 10px 20px;
+	min-height: 100px;
+}
+.sendButton{
+	width: 150px;
+	padding: 20px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 10px 20px;
+	transition: background-color .3s
+}
+	.sendButton:hover {
+		background-color: crimson;
+		color: white;
+		border: 2px solid crimson;
+	}
+
 
 footer {
     width: 100%;
