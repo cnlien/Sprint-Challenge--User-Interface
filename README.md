@@ -35,7 +35,7 @@ Edit this document to include your answers after each question. Make sure to lea
 1. If you were to describe semantic HTML to the next cohort of students, what would you say?
 
 
-Semantic HTML is the mark up structure of the code using provided tags that give the page structure. These tags can be <h1> through <h6>, <p>, <nav> among others.
+Semantic HTML is the mark up structure of the code using provided tags that give the page structure. These tags can be ```<h1> through <h6>, <p>, <nav>``` among others
 
 2. Name two big differences between ```display: block;``` and ```display: inline;```.
 
