@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -71,6 +71,43 @@ p {
     margin: 0 auto;
 }
 
+header {
+	display: flex;
+	padding: 20px 0;
+	flex-flow: column nowrap;
+}
+
+	header nav {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-bottom: 5px;
+	}
+
+	header .topNavLogo{
+		display: flex;
+		max-width: 157px;
+		max-height: 40px;
+		margin-right: auto;
+		padding-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	header nav a.headerNavLink{
+		display: flex;
+		justify-content:center;
+		padding: 30px 20px;
+		flex-grow: 1;
+		text-decoration: none;
+		color: black;
+		font-size: .9em;
+		background-color: white;
+		transition: background-color .3s;
+	}
+		header .headerNavLink:hover{
+			background-color: lightgrey;
+		}
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +119,7 @@ p {
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
 }
 
 .middle-content {
@@ -104,13 +141,45 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+	#teal {
+		background: teal;
+	}
+
+	#gold {
+		background: gold;
+	}
+
+	#cadetblue {
+		background-color: cadetblue;
+	}
+
+	#coral {
+		background-color: coral;
+	}
+	#crimson {
+		background-color: crimson;
+	}
+	#forestgreen {
+		background-color: forestgreen;
+	}
+	#darkorchid {
+		background-color: darkorchid;
+	}
+	#hotpink {
+		background-color: hotpink;
+	}
+	#indigo {
+		background-color: indigo;
+	}
+	#dodgerblue {
+		background-color: dodgerblue;
+	}
 
 .bottom-content {
     display: flex;
@@ -125,6 +194,117 @@ p {
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
+
+/*    ABOUT PAGE STYLES    */
+.aboutTop {
+	border-bottom: 1px dashed black;
+	padding-bottom: 20px;
+}
+.flexContainers {
+	display: flex;
+	width: 800px;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	flex-shrink: 1;
+	padding-bottom: 20px;
+}
+
+	@media screen and (max-width: 500px) {
+		.about-page, .contact-page{
+			max-width: 400px;
+		}
+		.aboutTop {
+			max-width:400px;
+			margin-top: 0 auto;
+			border-bottom: 1px dashed black;
+			padding: 0 10px 20px 10px;
+		}
+
+		.flexContainers {
+			display: flex;
+			max-width:400px;
+			margin: 0 auto;
+			flex-flow: column nowrap;
+			align-content: center;
+			padding-bottom: 20px;
+		}
+		nav .topNavLogo{
+			display: none;
+		}
+
+		.banner-img img{
+			max-width:400px;
+			object-fit: contain;
+
+		}
+	}
+
+	.aboutContainers {
+		display: flex;
+		flex-direction: column;
+		max-width: 380px;
+		margin: 0 10px;
+		flex-shrink: 1;
+		padding: 20px;
+		border-bottom: 1px dashed black;
+	}
+
+	.aboutContainers img{
+		width: 100%;
+		flex-shrink: 1;
+	}
+	.aboutContainers img, p {
+		margin-bottom: 20px;
+	}
+
+	.aboutContainers button {
+		border: 2px solid black;
+		background: white;
+		width: 150px;
+		padding: 10px 15px;
+		border-radius: 10px;
+		font-size: 1em;
+		font-family: 'Rubik', sans-serif;
+
+	}
+
+.aboutBottom{
+	padding: 20px;
+}
+
+/*   CONTACT FORM PAGE STYLE   */
+#contactUsForm{
+	margin: 20px 0;
+}
+#contactUsForm legend{
+	margin: 10px 0;
+}
+p.formLabel{
+	margin: 10px 0 0 20px;
+	font-size: .8em;
+}
+.contactFormMessage{
+	width: 100%;
+	margin: 10px 0 10px 20px;
+	min-height: 100px;
+}
+.sendButton{
+	width: 150px;
+	padding: 20px;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 10px 20px;
+	transition: background-color .3s
+}
+	.sendButton:hover {
+		background-color: crimson;
+		color: white;
+		border: 2px solid crimson;
+	}
+
 
 footer {
     width: 100%;
